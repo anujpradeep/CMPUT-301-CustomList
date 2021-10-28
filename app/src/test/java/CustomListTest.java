@@ -5,6 +5,7 @@ import com.example.simpleparadox.listycity.CustomList;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.ArrayList;
 
 public class CustomListTest {
