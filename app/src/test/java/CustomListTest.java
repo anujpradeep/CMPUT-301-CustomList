@@ -20,7 +20,7 @@ public class CustomListTest {
     public void addCityTest(){
         City c = new City("Edmonton", "AB");
         int size = list.getCount();
-        list.add(c);
+        list.addCity(c);
         assertEquals(size + 1,list.getCount());
     }
 }
