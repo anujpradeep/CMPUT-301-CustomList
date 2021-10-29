@@ -12,10 +12,14 @@ import java.util.ArrayList;
 public class CustomListTest {
 
     static CustomList list;
+
     @Before
     public void setup() {
         list = new CustomList(null, new ArrayList<City>());
-        list.addCity(new City("Halifax","NS"));
+    }
+
+    public City mockCity() {
+        return new City("Halifax","NS");
     }
 
     @Test
@@ -30,7 +34,12 @@ public class CustomListTest {
     public void deleteCityTest(){
         City c = new City("Edmonton", "AB");
         list.addCity(c);
-        int size = list.getCount();
         assertTrue(list.deleteCity(c));
+    }
+
+    @Test
+    public void hasCityTest(){
+        list.addCity(mockCity());
+        assertTrue(list.hasCity(mockCity()));
     }
 }
